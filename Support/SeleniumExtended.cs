@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -30,6 +31,21 @@ namespace DemoStoreSpecflowProject.Support
             wait.Until(ExpectedConditions.ElementIsVisible(locator)).SendKeys(text);
         }
 
+        public void clickButton(By locator, int? timeout = null)
+        {
+            int timeoutValue = timeout ?? defaultTimeout;
+
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutValue));
+            wait.Until(ExpectedConditions.ElementToBeClickable(locator)).Click();
+        }
+
+        public void waitUntilElementIsDisplayed(By locator, int? timeout = null)
+        {
+            int timeoutValue = timeout ?? defaultTimeout;
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutValue));
+            wait.Until(ExpectedConditions.ElementIsVisible(locator));
+
+        }
 
     }
 }

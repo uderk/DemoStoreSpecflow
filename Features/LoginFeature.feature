@@ -6,4 +6,6 @@ Testing the logging page
 Scenario: login with correct username and password
 	Given I go to the login page
 	When I type my username
-	Then I log in successfully
+	And I type my password
+	And I click on the login button
+	#Then I see my account message displayed

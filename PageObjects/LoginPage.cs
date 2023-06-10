@@ -36,5 +36,15 @@ namespace DemoStoreSpecflowProject.PageObjects
         {
             SelExtended.InputText(locator,username,timeout );
         }
+
+        public void inputPassword(By locator, string password, int timeout)
+        {
+            SelExtended.InputText(locator, password, 10);
+        }
+
+        public void clickLoginButton(By locator, int timeout)
+        {
+            SelExtended.clickButton(locator,timeout);
+        }
     }
 }
