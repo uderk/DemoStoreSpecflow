@@ -1,0 +1,48 @@
+# .NET / Visual Studio specific
+/.vs/
+*.userprefs
+*.suo
+*.cache
+*.dll
+*.exe
+*.pdb
+*.log
+*.bin
+*.obj
+*.tlog
+*.vsix
+*.nupkg
+*.resharper
+
+# Build results
+/_build/
+
+# SpecFlow generated files
+Feature.cs
+Feature.cs.vb
+MyFeature.feature.cs
+MyFeature.feature.cs.vb
+
+# Test Results
+/TestResults/
+
+# NuGet Packages
+/obj/
+/packages/
+
+# Visual Studio Code specific
+.vscode/
+
+# macOS specific
+.DS_Store
+
+# JetBrains Rider specific
+/.idea/
+*.sln.iml
+
+# Rider .NET Core
+**/*.dotnet-version
+
+# Build directories
+/bin/
+/obj/
