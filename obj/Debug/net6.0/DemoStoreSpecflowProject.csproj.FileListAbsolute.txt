@@ -117,3 +117,5 @@ C:\Users\venislav.zdravkov\Documents\Projects\DemoStoreSpecflowProject\DemoStore
 C:\Users\venislav.zdravkov\Documents\Projects\DemoStoreSpecflowProject\DemoStoreSpecflowProject\obj\Debug\net6.0\DemoStoreSpecflowProject.pdb
 C:\Users\venislav.zdravkov\Documents\Projects\DemoStoreSpecflowProject\DemoStoreSpecflowProject\obj\Debug\net6.0\DemoStoreSpecflowProject.genruntimeconfig.cache
 C:\Users\venislav.zdravkov\Documents\Projects\DemoStoreSpecflowProject\DemoStoreSpecflowProject\obj\Debug\net6.0\ref\DemoStoreSpecflowProject.dll
+C:\Users\venislav.zdravkov\Documents\Projects\DemoStoreSpecflowProject\DemoStoreSpecflowProject\bin\Debug\net6.0\Dynamitey.dll
+C:\Users\venislav.zdravkov\Documents\Projects\DemoStoreSpecflowProject\DemoStoreSpecflowProject\bin\Debug\net6.0\SpecFlow.Assist.Dynamic.dll

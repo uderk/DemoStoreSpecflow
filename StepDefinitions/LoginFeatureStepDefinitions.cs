@@ -2,6 +2,8 @@ using System;
 using TechTalk.SpecFlow;
 using DemoStoreSpecflowProject.PageObjects;
 using DemoStoreSpecflowProject.PageObjects.Locators;
+using TechTalk.SpecFlow.Assist;
+using OpenQA.Selenium;
 
 namespace DemoStoreSpecflowProject.StepDefinitions
 {
@@ -13,20 +15,25 @@ namespace DemoStoreSpecflowProject.StepDefinitions
         private LoginPageLocators LoginPageLocators;
         private MyAccountPage MyAccountPage;
         private MyAccountPageLocators MyAccountPageLocators;
+       // private ScenarioContext scenarioContext;
+        IWebDriver driver;
 
         public LoginFeatureStepDefinitions()
         {
+            //this.scenarioContext = scenarioContext;
             LoginPage = new LoginPage();
             LoginPageLocators = new LoginPageLocators();
             MyAccountPage = new MyAccountPage();
             MyAccountPageLocators = new MyAccountPageLocators();
         }
-
-        [Given(@"I go to the login page")]
-        public void GivenIGoToTheLoginPage()
+        [Given(@"I go to the login page with the following browsers")]
+        public void GivenIGoToTheLoginPageWithTheFollowingBrowsers(Table table)
         {
+            dynamic data = table.CreateDynamicInstance();
             LoginPage.GoToLoginPage();
+
         }
+
 
         [When(@"I type my username")]
         public void WhenITypeMyUsername()

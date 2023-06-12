@@ -20,7 +20,7 @@ namespace DemoStoreSpecflowProject.Drivers
         public WebDriverLibrary (ScenarioContext scenarioContext)
         {
             this.scenarioContext = scenarioContext;
-           // this.driver = driver;
+            this.driver = driver;
         }
 
         public IWebDriver Setup(string browserName)

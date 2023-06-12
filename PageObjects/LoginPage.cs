@@ -19,9 +19,10 @@ namespace DemoStoreSpecflowProject.PageObjects
 
         public LoginPage()
         {
-            driver = new ChromeDriver();
+           // driver = new ChromeDriver();
             SelExtended = new SeleniumExtended(driver, 10);
             LoginPageLoc = new LoginPageLocators();
+            this.driver = new ChromeDriver();
         }
 
         private string loginPageUrl = "http://mydemostore.local/my-account/";

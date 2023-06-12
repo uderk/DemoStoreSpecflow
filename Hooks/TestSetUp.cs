@@ -25,10 +25,10 @@ namespace DemoStoreSpecflowProject.Hooks
             scenarioContext.Set(webDriverLibrary, "WebDriverLibrary");
         }
 
-        [AfterScenario]
-        public void StopWebDriver()
-        {
-            this.scenarioContext.Get<IWebDriver>("WebDriver").Dispose();
-        }
+        //[AfterScenario]
+        //public void StopWebDriver()
+        //{
+        //    this.scenarioContext.Get<IWebDriver>("Webdriver").Dispose();
+        //}
     }
 }
