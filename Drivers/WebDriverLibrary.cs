@@ -17,10 +17,10 @@ namespace DemoStoreSpecflowProject.Drivers
         private readonly ScenarioContext scenarioContext;
         private readonly IWebDriver driver;
 
-        public WebDriverLibrary (ScenarioContext scenarioContext, IWebDriver driver)
+        public WebDriverLibrary (ScenarioContext scenarioContext)
         {
             this.scenarioContext = scenarioContext;
-            this.driver = driver;
+           // this.driver = driver;
         }
 
         public IWebDriver Setup(string browserName)
