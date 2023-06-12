@@ -640,6 +640,18 @@
           "build/Selenium.WebDriver.ChromeDriver.targets": {}
         }
       },
+      "Selenium.WebDriver.GeckoDriver/0.33.0": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.GeckoDriver.targets": {}
+        }
+      },
+      "Selenium.WebDriver.MicrosoftDriver/17.17134.0": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.MicrosoftDriver.targets": {}
+        }
+      },
       "SeleniumExtras.WaitHelpers/1.0.2": {
         "type": "package",
         "dependencies": {
@@ -2875,6 +2887,39 @@
         "nupkg-icon.png",
         "selenium.webdriver.chromedriver.114.0.5735.9000.nupkg.sha512",
         "selenium.webdriver.chromedriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver.GeckoDriver/0.33.0": {
+      "sha512": "73AN577bb5u2aXRUtWyAzUU2ThYCI1QIhUxbL3bC0bUwpeSNGr8ca5KkKC8cUPtyf+q0aDzxNseyu3uL0SDq6w==",
+      "type": "package",
+      "path": "selenium.webdriver.geckodriver/0.33.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "build/DefinePropertiesGeckoDriver.targets",
+        "build/Selenium.WebDriver.GeckoDriver.targets",
+        "driver/linux64/geckodriver",
+        "driver/mac64/geckodriver",
+        "driver/mac64arm/geckodriver",
+        "driver/win32/geckodriver.exe",
+        "driver/win64/geckodriver.exe",
+        "nupkg-icon.png",
+        "selenium.webdriver.geckodriver.0.33.0.nupkg.sha512",
+        "selenium.webdriver.geckodriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver.MicrosoftDriver/17.17134.0": {
+      "sha512": "22tIqQPNbFqWx32YO9XNKvWOcBu3Y98a+qb98xo3k37TkV/qPz7AbohsfaHBtizQtAqbQ5GHNM7re30uvF+amw==",
+      "type": "package",
+      "path": "selenium.webdriver.microsoftdriver/17.17134.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Selenium.WebDriver.MicrosoftDriver.targets",
+        "driver/MicrosoftWebDriver.exe",
+        "selenium.webdriver.microsoftdriver.17.17134.0.nupkg.sha512",
+        "selenium.webdriver.microsoftdriver.nuspec"
       ]
     },
     "SeleniumExtras.WaitHelpers/1.0.2": {
@@ -5786,6 +5831,8 @@
       "Selenium.Support >= 4.10.0",
       "Selenium.WebDriver >= 4.10.0",
       "Selenium.WebDriver.ChromeDriver >= 114.0.5735.9000",
+      "Selenium.WebDriver.GeckoDriver >= 0.33.0",
+      "Selenium.WebDriver.MicrosoftDriver >= 17.17134.0",
       "SeleniumExtras.WaitHelpers >= 1.0.2",
       "SpecFlow.NUnit >= 3.9.40",
       "SpecFlow.Plus.LivingDocPlugin >= 3.9.57",
@@ -5854,6 +5901,14 @@
           "Selenium.WebDriver.ChromeDriver": {
             "target": "Package",
             "version": "[114.0.5735.9000, )"
+          },
+          "Selenium.WebDriver.GeckoDriver": {
+            "target": "Package",
+            "version": "[0.33.0, )"
+          },
+          "Selenium.WebDriver.MicrosoftDriver": {
+            "target": "Package",
+            "version": "[17.17134.0, )"
           },
           "SeleniumExtras.WaitHelpers": {
             "target": "Package",

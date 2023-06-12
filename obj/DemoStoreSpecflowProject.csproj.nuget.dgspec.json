@@ -64,6 +64,14 @@
               "target": "Package",
               "version": "[114.0.5735.9000, )"
             },
+            "Selenium.WebDriver.GeckoDriver": {
+              "target": "Package",
+              "version": "[0.33.0, )"
+            },
+            "Selenium.WebDriver.MicrosoftDriver": {
+              "target": "Package",
+              "version": "[17.17134.0, )"
+            },
             "SeleniumExtras.WaitHelpers": {
               "target": "Package",
               "version": "[1.0.2, )"

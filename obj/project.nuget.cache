@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JQGInsE5nsXg0FpszHmKJwTkB2pa9WIytNJPvjJLIk6t5dz6F/bDUaSo7/T5c8NTzACXoFEQUw9gw3k1vv8n0w==",
+  "dgSpecHash": "/BNPj/VJaguezTQv/hTA3adlNsJlyns+o13KsCuf7qlFkZ9ygD1jcDOH/8eoCOh6FWfb2GtOQq4rzktsRNEudw==",
   "success": true,
   "projectFilePath": "C:\\Users\\venislav.zdravkov\\Documents\\Projects\\DemoStoreSpecflowProject\\DemoStoreSpecflowProject\\DemoStoreSpecflowProject.csproj",
   "expectedPackageFiles": [
@@ -38,6 +38,8 @@
     "C:\\Users\\venislav.zdravkov\\.nuget\\packages\\selenium.support\\4.10.0\\selenium.support.4.10.0.nupkg.sha512",
     "C:\\Users\\venislav.zdravkov\\.nuget\\packages\\selenium.webdriver\\4.10.0\\selenium.webdriver.4.10.0.nupkg.sha512",
     "C:\\Users\\venislav.zdravkov\\.nuget\\packages\\selenium.webdriver.chromedriver\\114.0.5735.9000\\selenium.webdriver.chromedriver.114.0.5735.9000.nupkg.sha512",
+    "C:\\Users\\venislav.zdravkov\\.nuget\\packages\\selenium.webdriver.geckodriver\\0.33.0\\selenium.webdriver.geckodriver.0.33.0.nupkg.sha512",
+    "C:\\Users\\venislav.zdravkov\\.nuget\\packages\\selenium.webdriver.microsoftdriver\\17.17134.0\\selenium.webdriver.microsoftdriver.17.17134.0.nupkg.sha512",
     "C:\\Users\\venislav.zdravkov\\.nuget\\packages\\seleniumextras.waithelpers\\1.0.2\\seleniumextras.waithelpers.1.0.2.nupkg.sha512",
     "C:\\Users\\venislav.zdravkov\\.nuget\\packages\\specflow\\3.9.40\\specflow.3.9.40.nupkg.sha512",
     "C:\\Users\\venislav.zdravkov\\.nuget\\packages\\specflow.internal.json\\1.0.8\\specflow.internal.json.1.0.8.nupkg.sha512",
