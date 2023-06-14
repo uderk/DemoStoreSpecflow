@@ -16,9 +16,9 @@ namespace DemoStoreSpecflowProject.PageObjects
         private MyAccountPageLocators MyAccountPageLocators;
         private SeleniumExtended SelExtended;
 
-        public MyAccountPage()
+        public MyAccountPage(IWebDriver driver)
         {
-            // driver = new ChromeDriver();
+            this.driver = driver;
             SelExtended = new SeleniumExtended(driver, 10);
             MyAccountPageLocators = new MyAccountPageLocators();
         }

@@ -17,9 +17,9 @@ namespace DemoStoreSpecflowProject.PageObjects
         private LoginPageLocators LoginPageLoc;
         private SeleniumExtended SelExtended;
 
-        public LoginPage()
+        public LoginPage(IWebDriver driver)
         {
-            driver = new ChromeDriver();
+            this.driver = driver;
             SelExtended = new SeleniumExtended(driver, 10);
             LoginPageLoc = new LoginPageLocators();
         }
@@ -31,10 +31,19 @@ namespace DemoStoreSpecflowProject.PageObjects
         {
             driver.Navigate().GoToUrl(this.loginPageUrl);
         }
-        // By myLocator = LoginPageLocators.userNameLoginLocator;
         public void inputUsername(By locator, string username, int timeout)
         {
             SelExtended.InputText(locator,username,timeout );
+        }
+
+        public void inputPassword(By locator, string password, int timeout)
+        {
+            SelExtended.InputText(locator, password, 10);
+        }
+
+        public void clickLoginButton(By locator, int timeout)
+        {
+            SelExtended.clickButton(locator, timeout);
         }
     }
 }

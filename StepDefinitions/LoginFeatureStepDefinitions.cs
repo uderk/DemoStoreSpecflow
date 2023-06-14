@@ -2,6 +2,8 @@ using System;
 using TechTalk.SpecFlow;
 using DemoStoreSpecflowProject.PageObjects;
 using DemoStoreSpecflowProject.PageObjects.Locators;
+using OpenQA.Selenium;
+using DemoStoreSpecflowProject.Support;
 
 namespace DemoStoreSpecflowProject.StepDefinitions
 {
@@ -11,11 +13,18 @@ namespace DemoStoreSpecflowProject.StepDefinitions
     {
         private LoginPage LoginPage;
         private LoginPageLocators LoginPageLocators;
+        private MyAccountPage MyAccountPage;
+        private MyAccountPageLocators MyAccountPageLocators;
+        private IWebDriver driver;
 
         public LoginFeatureStepDefinitions()
         {
-            LoginPage = new LoginPage();
+            driver = WebDriverManager.GetDriver();
+            LoginPage = new LoginPage(driver);
             LoginPageLocators = new LoginPageLocators();
+            MyAccountPage = new MyAccountPage(driver);
+            MyAccountPageLocators = new MyAccountPageLocators();
+
         }
 
         [Given(@"I go to the login page")]
@@ -31,10 +40,23 @@ namespace DemoStoreSpecflowProject.StepDefinitions
             LoginPage.inputUsername(LoginPageLocators.userNameLoginLocator, "venislav.zdravkov@gmail.com", 10);
         }
 
+        [When(@"I type my password")]
+        public void WhenITypeMyPassword()
+        {
+            LoginPage.inputPassword(LoginPageLocators.passwordLoginLocator, "!77842590!Uderk", 10);
+        }
+
+        [When(@"I click on login button")]
+        public void WhenIClickOnLoginButton()
+        {
+            LoginPage.clickLoginButton(LoginPageLocators.logInButtonLocator, 10);
+        }
+
+
         [Then(@"I log in successfully")]
         public void ThenILogInSuccessfully()
         {
-            Console.WriteLine("I am logged in successfully. This is a mock up to not have exception");
+            MyAccountPage.VerifyMyAccountMessageDisplayed(MyAccountPageLocators.myAccountMessageLocator, 10);
         }
 
     }
