@@ -60,14 +60,11 @@ namespace DemoStoreSpecflowProject.StepDefinitions
             MyAccountPage.VerifyMyAccountMessageDisplayed(MyAccountPageLocators.myAccountMessageLocator, 10);
         }
 
-        //public void CloseDriver()
-        //{
-        //    WebDriverManager.CloseDriver();
-        //}
-
-      
-
-        
+        [AfterScenario]
+        public void CloseBrowser()
+        {
+            WebDriverManager.CloseDriver();
+        }
 
     }
 }

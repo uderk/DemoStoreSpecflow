@@ -1,10 +1,6 @@
 ﻿using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DemoStoreSpecflowProject.Support
 {
@@ -22,12 +18,12 @@ namespace DemoStoreSpecflowProject.Support
             return driver;
         }
 
-        public static void CloseDriver() 
+        public static void CloseDriver()
         {
-           if(driver != null)
+            if (driver != null)
             {
                 driver.Quit();
-                driver.Dispose();
+                driver = null;
             }
         }
     }
