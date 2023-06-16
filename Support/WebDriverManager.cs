@@ -17,8 +17,18 @@ namespace DemoStoreSpecflowProject.Support
             if (driver == null)
             {
                 driver = new ChromeDriver();
+                driver.Manage().Window.Maximize();
             }
             return driver;
+        }
+
+        public static void CloseDriver() 
+        {
+           if(driver != null)
+            {
+                driver.Quit();
+                driver.Dispose();
+            }
         }
     }
 }
