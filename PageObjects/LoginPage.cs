@@ -17,7 +17,7 @@ namespace DemoStoreSpecflowProject.PageObjects
         private LoginPageLocators LoginPageLoc;
         private SeleniumExtended SelExtended;
         public string username = "venislav.zdravkov@gmail.com";
-        public string password = "!77842590!Uderk";
+        public string password = "!77842590!";
         public LoginPage(IWebDriver driver)
         {
             this.driver = driver;

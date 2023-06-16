@@ -4,6 +4,7 @@ using DemoStoreSpecflowProject.PageObjects;
 using DemoStoreSpecflowProject.PageObjects.Locators;
 using OpenQA.Selenium;
 using DemoStoreSpecflowProject.Support;
+using System.Runtime.CompilerServices;
 
 namespace DemoStoreSpecflowProject.StepDefinitions
 {
@@ -58,6 +59,15 @@ namespace DemoStoreSpecflowProject.StepDefinitions
         {
             MyAccountPage.VerifyMyAccountMessageDisplayed(MyAccountPageLocators.myAccountMessageLocator, 10);
         }
+
+        //public void CloseDriver()
+        //{
+        //    WebDriverManager.CloseDriver();
+        //}
+
+      
+
+        
 
     }
 }

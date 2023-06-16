@@ -21,5 +21,14 @@ namespace DemoStoreSpecflowProject.Support
             }
             return driver;
         }
+
+        public static void CloseDriver() 
+        {
+           if(driver != null)
+            {
+                driver.Quit();
+                driver.Dispose();
+            }
+        }
     }
 }
