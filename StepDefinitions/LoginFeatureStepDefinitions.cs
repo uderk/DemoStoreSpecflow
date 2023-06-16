@@ -37,13 +37,13 @@ namespace DemoStoreSpecflowProject.StepDefinitions
         public void WhenITypeMyUsername()
         {
             Console.WriteLine("I do some shit here");
-            LoginPage.inputUsername(LoginPageLocators.userNameLoginLocator, "venislav.zdravkov@gmail.com", 10);
+            LoginPage.inputUsername(LoginPageLocators.userNameLoginLocator, LoginPage.username);
         }
 
         [When(@"I type my password")]
         public void WhenITypeMyPassword()
         {
-            LoginPage.inputPassword(LoginPageLocators.passwordLoginLocator, "!77842590!Uderk", 10);
+            LoginPage.inputPassword(LoginPageLocators.passwordLoginLocator, LoginPage.password);
         }
 
         [When(@"I click on login button")]

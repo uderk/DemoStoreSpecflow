@@ -16,7 +16,8 @@ namespace DemoStoreSpecflowProject.PageObjects
         private IWebDriver driver;
         private LoginPageLocators LoginPageLoc;
         private SeleniumExtended SelExtended;
-
+        public string username = "venislav.zdravkov@gmail.com";
+        public string password = "!77842590!Uderk";
         public LoginPage(IWebDriver driver)
         {
             this.driver = driver;
@@ -31,14 +32,14 @@ namespace DemoStoreSpecflowProject.PageObjects
         {
             driver.Navigate().GoToUrl(this.loginPageUrl);
         }
-        public void inputUsername(By locator, string username, int timeout)
+        public void inputUsername(By locator, string username, int timeout=10)
         {
             SelExtended.InputText(locator,username,timeout );
         }
 
-        public void inputPassword(By locator, string password, int timeout)
+        public void inputPassword(By locator, string password, int timeout=10)
         {
-            SelExtended.InputText(locator, password, 10);
+            SelExtended.InputText(locator, password, timeout);
         }
 
         public void clickLoginButton(By locator, int timeout)
