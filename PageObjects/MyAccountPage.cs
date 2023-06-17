@@ -25,7 +25,7 @@ namespace DemoStoreSpecflowProject.PageObjects
 
         public void VerifyMyAccountMessageDisplayed(By locator, int timeout=10)
         {
-            SelExtended.waitUntilElementIsDisplayed(MyAccountPageLocators.myAccountMessageLocator, 10);
+            SelExtended.WaitUntilElementIsDisplayed(MyAccountPageLocators.myAccountMessageLocator, 10);
         }
 
     }

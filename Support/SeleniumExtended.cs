@@ -30,7 +30,7 @@ namespace DemoStoreSpecflowProject.Support
             wait.Until(ExpectedConditions.ElementIsVisible(locator)).SendKeys(text);
         }
 
-        public void clickButton(By locator, int? timeout = null)
+        public void ClickButton(By locator, int? timeout = null)
         {
             int timeoutValue = timeout ?? defaultTimeout;
 
@@ -38,11 +38,26 @@ namespace DemoStoreSpecflowProject.Support
             wait.Until(ExpectedConditions.ElementToBeClickable(locator)).Click();
         }
 
-        public void waitUntilElementIsDisplayed(By locator, int? timeout = null)
+        public void WaitUntilElementIsDisplayed(By locator, int? timeout = null)
         {
             int timeoutValue = timeout ?? defaultTimeout;
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutValue));
             wait.Until(ExpectedConditions.ElementIsVisible(locator));
+
+        }
+
+        public void CheckIfElementIsNotDisplayed(By locator, int? timeout = null)
+        {
+            int timeoutValue = timeout ?? defaultTimeout;
+            try
+            {
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutValue));
+                wait.Until(ExpectedConditions.InvisibilityOfElementLocated(locator));
+            }
+            catch (WebDriverTimeoutException)
+            {
+                Console.WriteLine("Element is present in the DOM.");
+            }
 
         }
     }

@@ -52,7 +52,7 @@ namespace DemoStoreSpecflowProject.StepDefinitions
         [When(@"I click on login button")]
         public void WhenIClickOnLoginButton()
         {
-            LoginPage.clickLoginButton(LoginPageLocators.logInButtonLocator, 10);
+            LoginPage.ClickLoginButton(LoginPageLocators.logInButtonLocator, 10);
         }
 
 

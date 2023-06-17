@@ -8,7 +8,7 @@ using TechTalk.SpecFlow;
 namespace DemoStoreSpecflowProject.StepDefinitions
 {
     [Binding]
-    public class RegisterValidUserStepDefinitions
+    public class RegisterUserStepDefinitions
     {
         private IWebDriver driver;
         private LoginPage LoginPage;
@@ -17,7 +17,7 @@ namespace DemoStoreSpecflowProject.StepDefinitions
         private MyAccountPage MyAccountPage;
         private MyAccountPageLocators MyAccountPageLocators;
 
-        public RegisterValidUserStepDefinitions()
+        public RegisterUserStepDefinitions()
         {
             driver = WebDriverManager.GetDriver();
             LoginPage = new LoginPage(driver);
@@ -50,5 +50,26 @@ namespace DemoStoreSpecflowProject.StepDefinitions
         {
             MyAccountPage.VerifyMyAccountMessageDisplayed(MyAccountPageLocators.myAccountMessageLocator);
         }
+
+        [When(@"I type invalid email ""([^""]*)""")]
+        public void WhenITypeInvalidEmail(string email)
+        {
+            LoginPage.InputUsername(LoginPageLoc.registerWithEmailLocator, email);
+        }
+
+        [When(@"I type valid password")]
+        public void WhenITypeValidPassword()
+        {
+            string password = RandomSupportFunctions.GeneratePassword(10);
+            LoginPage.InputPassword(LoginPageLoc.registerPasswrodLocator,password);
+        }
+
+        [Then(@"I should not see a success message")]
+        public void ThenIShouldNotSeeASuccessMessage()
+        {
+            LoginPage.VerifyIfNoMyAccountMessageIsDisplayed(MyAccountPageLocators.dashboardLocator);
+        }
+
+
     }
 }

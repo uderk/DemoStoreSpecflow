@@ -16,5 +16,6 @@ namespace DemoStoreSpecflowProject.PageObjects.Locators
         public By registerWithEmailLocator = By.Id("reg_email");
         public By registerPasswrodLocator = By.Id("reg_password");
 
+
     }
 }

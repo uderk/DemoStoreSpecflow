@@ -42,9 +42,14 @@ namespace DemoStoreSpecflowProject.PageObjects
             SelExtended.InputText(locator, password, timeout);
         }
 
-        public void clickLoginButton(By locator, int timeout)
+        public void ClickLoginButton(By locator, int timeout)
         {
-            SelExtended.clickButton(locator, timeout);
+            SelExtended.ClickButton(locator, timeout);
+        }
+
+        public void VerifyIfNoMyAccountMessageIsDisplayed(By locator)
+        {
+            SelExtended.CheckIfElementIsNotDisplayed(locator);
         }
     }
 }
