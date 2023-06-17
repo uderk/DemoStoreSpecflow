@@ -26,6 +26,17 @@ Scenario Outline: try to login with nonexisting username
    | wronUser1  | !77842590!     |
    | wrongUser2 | !77842590Uderk |
 
+@negative
+Scenario Outline: try to login with wrong password
+Given I go to the login page
+When I type my username "<username>"
+And I type wrong password "<wrongPassword>"
+Then I should see an error message
+
+Examples: 
+| username                   | wrongPassword                  |
+| venislv.zdravkov@gmail.com | SomeWrongPassword123546        |
+| venko.zdravkov@gmail.com   | SomeAnotherWrongPassword123456 |
 
 
 

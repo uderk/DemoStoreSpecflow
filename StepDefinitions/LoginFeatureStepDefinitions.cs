@@ -82,6 +82,18 @@ namespace DemoStoreSpecflowProject.StepDefinitions
             MyAccountPage.VerifyMyAccountMessageDisplayed(MyAccountPageLocators.myAccountErrorMessageInvalidUser);
         }
 
+        [When(@"I type my username ""([^""]*)""")]
+        public void WhenITypeMyUsername(string username)
+        {
+           LoginPage.InputUsername(LoginPageLocators.userNameLoginLocator,username);
+        }
+
+        [When(@"I type wrong password ""([^""]*)""")]
+        public void WhenITypeWrongPassword(string wrongPassword)
+        {
+            LoginPage.InputPassword(LoginPageLocators.passwordLoginLocator, wrongPassword);
+        }
+
 
     }
 }
