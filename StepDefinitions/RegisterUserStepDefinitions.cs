@@ -70,6 +70,17 @@ namespace DemoStoreSpecflowProject.StepDefinitions
             LoginPage.VerifyIfNoMyAccountMessageIsDisplayed(MyAccountPageLocators.dashboardLocator);
         }
 
+        [When(@"I type valid mail ""([^""]*)""")]
+        public void WhenITypeValidMail(string email)
+        {
+            LoginPage.InputUsername(LoginPageLoc.registerWithEmailLocator, email);
+        }
+
+        [When(@"I type invalid password ""([^""]*)""")]
+        public void WhenITypeInvalidPassword(string invlaidPassword)
+        {
+            LoginPage.InputPassword(LoginPageLoc.registerPasswrodLocator, invlaidPassword);
+        }
 
     }
 }

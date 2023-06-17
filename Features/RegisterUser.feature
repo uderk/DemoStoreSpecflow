@@ -14,6 +14,7 @@ Scenario Outline:Register Valid User
 	| user1    | !User-1-77842590 |
 	| user2    | !User-2-77842590 |
 
+@negative
 Scenario Outline: Try to register user with invalid email
 Given I am on the login page
 When I type invalid email "<email>"
@@ -25,3 +26,15 @@ Examples:
 | veni          |
 | veni.zdravkov |
 | 13256         |
+
+Scenario Outline: Try to register user with valid email, but invalid password 
+Given I am on the login page
+When I type valid mail "<email>"
+And I type invalid password "<invlalidPassword>"
+Then I should not see a success message
+
+Examples: 
+| email        | invlalidPassword|
+| user4@abv.bg | 123456          |
+| user5@abv.bg | 123456Aa        |
+| user5@abv.bg | 123456Aa!       |
