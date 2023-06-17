@@ -4,7 +4,7 @@ Testing the logging page
 
 
 
-@tag1
+
 Scenario: login with correct username and password
 	Given I go to the login page
 	When I type my username
@@ -12,7 +12,7 @@ Scenario: login with correct username and password
 	And I click on login button
 	Then I log in successfully
 
-@negative
+
 Scenario Outline: try to login with nonexisting username
    Given I go to the login page
    When I type my non-exsiting user name "<username>"
@@ -26,7 +26,7 @@ Scenario Outline: try to login with nonexisting username
    | wronUser1  | !77842590!     |
    | wrongUser2 | !77842590Uderk |
 
-@negative
+
 Scenario Outline: try to login with wrong password
 Given I go to the login page
 When I type my username "<username>"

@@ -75,11 +75,9 @@ namespace DemoStoreSpecflowProject.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("login with correct username and password")]
-        [NUnit.Framework.CategoryAttribute("tag1")]
         public virtual void LoginWithCorrectUsernameAndPassword()
         {
-            string[] tagsOfScenario = new string[] {
-                    "tag1"};
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("login with correct username and password", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 8
@@ -123,18 +121,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("try to login with nonexisting username")]
-        [NUnit.Framework.CategoryAttribute("negative")]
         [NUnit.Framework.TestCaseAttribute("wronUser1", "!77842590!", null)]
         [NUnit.Framework.TestCaseAttribute("wrongUser2", "!77842590Uderk", null)]
         public virtual void TryToLoginWithNonexistingUsername(string username, string password, string[] exampleTags)
         {
-            string[] @__tags = new string[] {
-                    "negative"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("username", username);
             argumentsOfScenario.Add("password", password);
@@ -180,18 +171,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("try to login with wrong password")]
-        [NUnit.Framework.CategoryAttribute("negative")]
         [NUnit.Framework.TestCaseAttribute("venislv.zdravkov@gmail.com", "SomeWrongPassword123546", null)]
         [NUnit.Framework.TestCaseAttribute("venko.zdravkov@gmail.com", "SomeAnotherWrongPassword123456", null)]
         public virtual void TryToLoginWithWrongPassword(string username, string wrongPassword, string[] exampleTags)
         {
-            string[] @__tags = new string[] {
-                    "negative"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("username", username);
             argumentsOfScenario.Add("wrongPassword", wrongPassword);

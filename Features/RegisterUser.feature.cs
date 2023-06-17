@@ -75,18 +75,11 @@ namespace DemoStoreSpecflowProject.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Register Valid User")]
-        [NUnit.Framework.CategoryAttribute("tag1")]
         [NUnit.Framework.TestCaseAttribute("user1", "!User-1-77842590", null)]
         [NUnit.Framework.TestCaseAttribute("user2", "!User-2-77842590", null)]
         public virtual void RegisterValidUser(string username, string password, string[] exampleTags)
         {
-            string[] @__tags = new string[] {
-                    "tag1"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("username", username);
             argumentsOfScenario.Add("password", password);
@@ -129,19 +122,12 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Try to register user with invalid email")]
-        [NUnit.Framework.CategoryAttribute("negative")]
         [NUnit.Framework.TestCaseAttribute("veni", null)]
         [NUnit.Framework.TestCaseAttribute("veni.zdravkov", null)]
         [NUnit.Framework.TestCaseAttribute("13256", null)]
         public virtual void TryToRegisterUserWithInvalidEmail(string email, string[] exampleTags)
         {
-            string[] @__tags = new string[] {
-                    "negative"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("email", email);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Try to register user with invalid email", null, tagsOfScenario, argumentsOfScenario, this._featureTags);

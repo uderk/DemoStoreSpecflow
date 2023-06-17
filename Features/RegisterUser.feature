@@ -2,7 +2,7 @@
 
 Test the register user page with valid user
 
-@tag1
+
 Scenario Outline:Register Valid User
 	Given I am on the login page
 	When I type "<email>"
@@ -14,7 +14,7 @@ Scenario Outline:Register Valid User
 	| user1    | !User-1-77842590 |
 	| user2    | !User-2-77842590 |
 
-@negative
+
 Scenario Outline: Try to register user with invalid email
 Given I am on the login page
 When I type invalid email "<email>"
