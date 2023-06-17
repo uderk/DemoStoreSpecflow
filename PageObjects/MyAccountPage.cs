@@ -27,5 +27,10 @@ namespace DemoStoreSpecflowProject.PageObjects
         {
             SelExtended.waitUntilElementIsDisplayed(MyAccountPageLocators.myAccountMessageLocator, 10);
         }
+
+        //public void VerifyIfErrorMessageIsDisplayed(By locator)
+        //{
+        //    SelExtended.waitUntilElementIsDisplayed(locator);
+        //}
     }
 }
