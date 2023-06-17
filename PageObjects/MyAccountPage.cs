@@ -27,5 +27,6 @@ namespace DemoStoreSpecflowProject.PageObjects
         {
             SelExtended.waitUntilElementIsDisplayed(MyAccountPageLocators.myAccountMessageLocator, 10);
         }
+
     }
 }

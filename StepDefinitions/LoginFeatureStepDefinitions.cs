@@ -62,5 +62,38 @@ namespace DemoStoreSpecflowProject.StepDefinitions
             MyAccountPage.VerifyMyAccountMessageDisplayed(MyAccountPageLocators.myAccountMessageLocator, 10);
         }
 
+
+
+        [When(@"I type my non-exsiting user name ""([^""]*)""")]
+        public void WhenITypeMyLoginName(string username)
+        {
+            LoginPage.InputUsername(LoginPageLocators.userNameLoginLocator, username);
+        }
+
+        [When(@"I type my non valid password ""([^""]*)""")]
+        public void WhenITypeMyPassword(string nonValidPassword)
+        {
+            LoginPage.InputPassword(LoginPageLocators.userNameLoginLocator, nonValidPassword);
+        }
+
+        [Then(@"I should see an error message")]
+        public void ThenIShouldSeeAnErrorMessage()
+        {
+            MyAccountPage.VerifyMyAccountMessageDisplayed(MyAccountPageLocators.myAccountErrorMessageInvalidUser);
+        }
+
+        [When(@"I type my username ""([^""]*)""")]
+        public void WhenITypeMyUsername(string username)
+        {
+           LoginPage.InputUsername(LoginPageLocators.userNameLoginLocator,username);
+        }
+
+        [When(@"I type wrong password ""([^""]*)""")]
+        public void WhenITypeWrongPassword(string wrongPassword)
+        {
+            LoginPage.InputPassword(LoginPageLocators.passwordLoginLocator, wrongPassword);
+        }
+
+
     }
 }

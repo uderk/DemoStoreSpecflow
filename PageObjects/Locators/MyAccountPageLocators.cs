@@ -10,5 +10,6 @@ namespace DemoStoreSpecflowProject.PageObjects.Locators
     public class MyAccountPageLocators
     {
         public By myAccountMessageLocator = By.XPath("//h1[contains(text(),\"My account\")]");
+        public By myAccountErrorMessageInvalidUser = By.XPath("//ul[@class=\"woocommerce-error\" and @role=\"alert\"]");
     }
 }
