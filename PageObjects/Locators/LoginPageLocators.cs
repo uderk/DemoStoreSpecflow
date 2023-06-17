@@ -10,10 +10,11 @@ namespace DemoStoreSpecflowProject.PageObjects.Locators
 {
     public  class LoginPageLocators
     {
-        public  By userNameLoginLocator = By.Id("username");
-        public  By passwordLoginLocator = By.Id("password");
-        public  By logInButtonLocator = By.Name("login");
-
+        public By userNameLoginLocator = By.Id("username");
+        public By passwordLoginLocator = By.Id("password");
+        public By logInButtonLocator = By.Name("login");
+        public By registerWithEmailLocator = By.Id("reg_email");
+        public By registerPasswrodLocator = By.Id("reg_password");
 
     }
 }
