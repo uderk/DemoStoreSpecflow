@@ -4,7 +4,7 @@ Test the register user page with valid user
 
 @tag1
 Scenario Outline:Register Valid User
-	Given I go to the login page
+	Given I am on the login page
 	When I type "<email>"
 	And I type my new "<password>"
 	Then I see success message 

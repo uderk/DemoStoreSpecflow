@@ -32,12 +32,12 @@ namespace DemoStoreSpecflowProject.PageObjects
         {
             driver.Navigate().GoToUrl(this.loginPageUrl);
         }
-        public void inputUsername(By locator, string username, int timeout=10)
+        public void InputUsername(By locator, string username, int timeout=10)
         {
             SelExtended.InputText(locator,username,timeout );
         }
 
-        public void inputPassword(By locator, string password, int timeout=10)
+        public void InputPassword(By locator, string password, int timeout=10)
         {
             SelExtended.InputText(locator, password, timeout);
         }

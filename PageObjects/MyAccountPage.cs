@@ -23,7 +23,7 @@ namespace DemoStoreSpecflowProject.PageObjects
             MyAccountPageLocators = new MyAccountPageLocators();
         }
 
-        public void VerifyMyAccountMessageDisplayed(By locator, int timeout)
+        public void VerifyMyAccountMessageDisplayed(By locator, int timeout=10)
         {
             SelExtended.waitUntilElementIsDisplayed(MyAccountPageLocators.myAccountMessageLocator, 10);
         }
