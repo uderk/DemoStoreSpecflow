@@ -18,6 +18,8 @@ namespace DemoStoreSpecflowProject.StepDefinitions
         private MyAccountPageLocators MyAccountPageLocators;
         private IWebDriver driver;
 
+
+
         public LoginFeatureStepDefinitions()
         {
             driver = WebDriverManager.GetDriver();
@@ -58,12 +60,6 @@ namespace DemoStoreSpecflowProject.StepDefinitions
         public void ThenILogInSuccessfully()
         {
             MyAccountPage.VerifyMyAccountMessageDisplayed(MyAccountPageLocators.myAccountMessageLocator, 10);
-        }
-
-        [AfterScenario]
-        public void CloseBrowser()
-        {
-            WebDriverManager.CloseDriver();
         }
 
     }
