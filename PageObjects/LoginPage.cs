@@ -11,14 +11,14 @@ using System.Security.Policy;
 
 namespace DemoStoreSpecflowProject.PageObjects
 {
-    public  class LoginPage
+    public  class LoginPage:BasePage
     {
         private IWebDriver driver;
         private LoginPageLocators LoginPageLoc;
         private SeleniumExtended SelExtended;
         public string username = "venislav.zdravkov@gmail.com";
         public string password = "!77842590!";
-        public LoginPage(IWebDriver driver)
+        public LoginPage(IWebDriver driver):base(driver) 
         {
             this.driver = driver;
             SelExtended = new SeleniumExtended(driver, 10);
