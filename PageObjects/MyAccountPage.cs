@@ -10,13 +10,13 @@ using OpenQA.Selenium.Chrome;
 
 namespace DemoStoreSpecflowProject.PageObjects
 {
-    public class MyAccountPage
+    public class MyAccountPage: BasePage
     {
         private IWebDriver driver;
         private MyAccountPageLocators MyAccountPageLocators;
         private SeleniumExtended SelExtended;
 
-        public MyAccountPage(IWebDriver driver)
+        public MyAccountPage(IWebDriver driver):base(driver)
         {
             this.driver = driver;
             SelExtended = new SeleniumExtended(driver, 10);
