@@ -35,7 +35,7 @@ namespace DemoStoreSpecflowProject.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "LoginFeature", "Testing the logging page", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "LoginFeature", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -73,6 +73,15 @@ namespace DemoStoreSpecflowProject.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 2
+#line hidden
+#line 3
+testRunner.Given("I go to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("login with correct username and password")]
         public virtual void LoginWithCorrectUsernameAndPassword()
@@ -80,7 +89,7 @@ namespace DemoStoreSpecflowProject.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("login with correct username and password", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 8
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -100,8 +109,8 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 9
- testRunner.Given("I go to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 2
+this.FeatureBackground();
 #line hidden
 #line 10
  testRunner.When("I type my username", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -150,19 +159,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 17
-   testRunner.Given("I go to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 2
+this.FeatureBackground();
 #line hidden
-#line 18
+#line 17
    testRunner.When(string.Format("I type my non-exsiting user name \"{0}\"", username), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 19
+#line 18
    testRunner.And(string.Format("I type my non valid password \"{0}\"", password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 20
+#line 19
    testRunner.And("I click on login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 21
+#line 20
    testRunner.Then("I should see an error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -180,7 +189,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("username", username);
             argumentsOfScenario.Add("wrongPassword", wrongPassword);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("try to login with wrong password", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 30
+#line 29
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -200,16 +209,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 31
-testRunner.Given("I go to the login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 2
+this.FeatureBackground();
 #line hidden
-#line 32
+#line 30
 testRunner.When(string.Format("I type my username \"{0}\"", username), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 33
+#line 31
 testRunner.And(string.Format("I type wrong password \"{0}\"", wrongPassword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 34
+#line 32
 testRunner.Then("I should see an error message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
