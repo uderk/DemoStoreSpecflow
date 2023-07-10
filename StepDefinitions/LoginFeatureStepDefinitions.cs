@@ -17,7 +17,7 @@ namespace DemoStoreSpecflowProject.StepDefinitions
         private MyAccountPage MyAccountPage;
         private MyAccountPageLocators MyAccountPageLocators;
         private IWebDriver driver;
-
+        //private WebDriverManager DriverManager;
 
 
         public LoginFeatureStepDefinitions()
